@@ -8,10 +8,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
+    let defaultText = 'にゃんぱすー `にゃんぱすー`'
+
     this.state = {
-      text: 'にゃんぱすー',
-      textResult: kanaToEmojizedText('にゃんぱすー'),
-      htmlResult: kanaToEmojizedHtml('にゃんぱすー', {size: 16})
+      text: defaultText,
+      textResult: kanaToEmojizedText(defaultText),
+      htmlResult: kanaToEmojizedHtml(defaultText, {size: 16})
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -34,7 +36,7 @@ class App extends React.Component {
     return (
       <div>
         <textarea className="textarea" value={this.state.text} onChange={this.onInputChange}></textarea>
-        <div className="result">
+        <div className="preview">
           {wrapEmojizedHtml(this.state.htmlResult)} #Emojizr
         </div>
         <div className="submit">

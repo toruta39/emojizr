@@ -1,0 +1,113 @@
+@require 'nib'
+
+global-reset()
+
+.emoji
+  display inline-block
+
+$section
+  display block
+  width 100%
+  max-width 508px
+  height 80px
+  margin 32px auto
+
+.title
+  margin-top 96px
+  font-size 72px
+  text-align center
+
+.description
+  margin 16px auto
+  font-size 14px
+  text-align center
+
+  p
+    margin 16px 0
+    text-align center
+
+  strong
+    margin 0 2px
+    font-weight bold
+
+  span
+    margin 0 2px
+
+  ul
+    display inline-block
+
+  li
+    margin 5px 0
+    text-align left
+    list-style-type disc
+    color #aaa
+    line-height 18px
+
+  code
+    display inline-block
+    margin 0 2px
+    padding 2px
+    background #eee
+    border-radius 3px
+    color #f15d63
+    font-family monospace
+
+main
+footer
+  margin 0 auto
+  width 100%
+  max-width 508px
+
+footer
+  clearfix()
+
+.textarea
+.preview
+  @extend $section
+  max-width 486px
+  padding 8px 10px
+  border 1px solid #5dadf1
+  border-radius 3px
+  font-size 14px
+
+.submit
+  @extend $section
+  text-align right
+
+.tweet-button
+  display inline-block
+  text-align center
+  padding 12px 16px 10px
+  font-size 14px
+  line-height 16px
+  border-radius 3px
+  border 1px solid #5dadf1
+  background #5dadf1
+  color #fff
+  text-decoration none
+
+  &:hover
+    background #46a1ef
+
+  &:active
+    background #1789eb
+
+.twitter-icon
+  vertical-align middle
+  margin-right 8px
+
+.social
+  float left
+
+  li
+    display inline-block
+    vertical-align top
+
+.copyright
+  float right
+  font-size 12px
+  color #aaa
+
+.copyright a
+  color #999
+
