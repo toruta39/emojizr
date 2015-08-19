@@ -5,13 +5,6 @@ global-reset()
 .emoji
   display inline-block
 
-$section
-  display block
-  width 100%
-  max-width 508px
-  height 80px
-  margin 32px auto
-
 .title
   margin-top 96px
   font-size 72px
@@ -58,20 +51,35 @@ footer
   width 100%
   max-width 508px
 
+main
+  min-height 302px // FOUC
+
 footer
   clearfix()
+  margin-top 64px
+
+section
+  display block
+  width 100%
+  max-width 508px
+  margin 32px auto
+
+  h2
+    display none
 
 .textarea
 .preview
-  @extend $section
+  display block
+  width 100%
   max-width 486px
+  height 80px
   padding 8px 10px
   border 1px solid #5dadf1
   border-radius 3px
   font-size 14px
 
 .submit
-  @extend $section
+  @extend section
   text-align right
 
 .tweet-button

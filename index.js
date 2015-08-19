@@ -35,13 +35,21 @@ class App extends React.Component {
 
     return (
       <div>
-        <textarea className="textarea" value={this.state.text} onChange={this.onInputChange}></textarea>
-        <div className="preview">
-          {wrapEmojizedHtml(this.state.htmlResult)} #Emojizr
-        </div>
-        <div className="submit">
+        <section>
+          <h2>本文：</h2>
+          <textarea className="textarea" value={this.state.text} onChange={this.onInputChange}></textarea>
+        </section>
+
+        <section>
+          <h2>プレビュー：</h2>
+          <div className="preview">
+            {wrapEmojizedHtml(this.state.htmlResult)} #Emojizr
+          </div>
+        </section>
+
+        <section className="submit">
           <TweetButton text={this.state.textResult} />
-        </div>
+        </section>
       </div>
     );
   }
