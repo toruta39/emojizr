@@ -29,7 +29,7 @@ class App extends React.Component {
 
   render() {
     function wrapEmojizedHtml(html) {
-      return <p className="emoji" dangerouslySetInnerHTML={{
+      return <p className="emojized" dangerouslySetInnerHTML={{
                 __html: html}} />;
     }
 

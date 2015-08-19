@@ -2,22 +2,42 @@
 
 global-reset()
 
-.emoji
+wide-screen()
+  @media screen and (min-width: 640px)
+    {block}
+
+.emojized
   display inline-block
 
 .title
-  margin-top 96px
   font-size 72px
   text-align center
 
+  +wide-screen()
+    margin-top 72px
+
+  img
+    width 36px
+    height 36px
+
+    +wide-screen()
+      width 72px
+      height 72px
+
 .description
-  margin 16px auto
-  font-size 14px
+  margin 8px auto
+  font-size 12px
   text-align center
+
+  +wide-screen()
+    margin 16px auto
+    font-size 14px
 
   p
     margin 16px 0
     text-align center
+    +wide-screen()
+      margin 32px auto
 
   strong
     margin 0 2px
@@ -27,7 +47,11 @@ global-reset()
     margin 0 2px
 
   ul
-    display inline-block
+    width 250px
+    margin 8px auto
+    +wide-screen()
+      width 420px
+      margin 16px auto
 
   li
     margin 5px 0
@@ -51,18 +75,20 @@ footer
   width 100%
   max-width 508px
 
-main
-  min-height 302px // FOUC
+main // FOUC
 
-footer
-  clearfix()
-  margin-top 64px
+  +wide-screen()
+    min-height 302px
 
 section
   display block
+  margin 16px auto
   width 100%
-  max-width 508px
-  margin 32px auto
+  max-width 300px
+
+  +wide-screen()
+    max-width 508px
+    margin 32px auto
 
   h2
     display none
@@ -71,8 +97,8 @@ section
 .preview
   display block
   width 100%
-  max-width 486px
-  height 80px
+  box-sizing border-box
+  height 96px
   padding 8px 10px
   border 1px solid #5dadf1
   border-radius 3px
@@ -105,17 +131,32 @@ section
   margin-right 8px
 
 .social
-  float left
+  margin 16px auto
+  text-align center
+
+  +wide-screen()
+    float left
+    text-align left
 
   li
     display inline-block
     vertical-align top
 
+footer
+  clearfix()
+
+  +wide-screen()
+    margin-top 64px
+
 .copyright
-  float right
+  margin 16px auto
+  text-align center
   font-size 12px
   color #aaa
 
+  +wide-screen()
+    text-align right
+    float right
+
 .copyright a
   color #999
-
