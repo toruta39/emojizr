@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Emojizr（えもじゃいざー）は仮名を絵文字に変換させるツールです。">
+  <meta name="keywords" content="Emoji,Emojizr,Converter,Twitter,Tweet,えもじゃいざー,絵文字,変換">
+  <meta name="author" content="Joshua Zhang">
+
+  <meta property="og:title" content="Emojizr">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Emojizr（えもじゃいざー）は仮名を絵文字に変換させるツールです。">
+  <meta property="og:url" content="http://emojizr.t39.me">
+  <meta property="og:site_name" content="Emojizr">
+
+  <title>Emojizr</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="fb-root"></div>
+
+  <header>
+    <h1 class="title" title="Emojizr">
+      <p class="emoji">
+        <img class="emoji" draggable="false" alt="E" src="http://twemoji.maxcdn.com/72x72/1f600.png"><img class="emoji" draggable="false" alt="m" src="http://twemoji.maxcdn.com/72x72/1f62e.png"><img class="emoji" draggable="false" alt="o" src="http://twemoji.maxcdn.com/72x72/1f62c.png"><img class="emoji" draggable="false" alt="j" src="http://twemoji.maxcdn.com/72x72/1f603.png"><img class="emoji" draggable="false" alt="i" src="http://twemoji.maxcdn.com/72x72/1f62c.png"><img class="emoji" draggable="false" alt="z" src="http://twemoji.maxcdn.com/72x72/1f603.png"><img class="emoji" draggable="false" alt="r" src="http://twemoji.maxcdn.com/72x72/1f603.png">
+      </p>
+    </h1>
+    <div class="description">
+      <strong>Emojizr（えもじゃいざー）</strong>は<span>仮名</span>を<span>絵文字</span>に変換させるツールです。
+    </div>
+  </header>
+  <main id="app"></main>
+  <footer class="cf">
+    <ul class="social">
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="#Emojizr で仮名を絵文字に変換してツイートしよう！" data-lang="ja" data-related="toruta39">ツイート</a>
+      </li>
+      <li>
+        <div class="fb-like" data-href="http://emojizr.t39.me" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+      </li>
+    </ul>
+
+    <p class="copyright">
+      Made by <a href="https://twitter.com/toruta39" target="_blank">@toruta39</a>
+    </p>
+  </footer>
+
+  <script src="dist/bundle.js"></script>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.4&appId=";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+</body>
+</html>
