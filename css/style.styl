@@ -2,6 +2,9 @@
 
 global-reset()
 
+html
+  font-family sans-serif
+
 wide-screen()
   @media screen and (min-width: 640px)
     {block}
@@ -106,7 +109,10 @@ section
 
 .submit
   @extend section
-  text-align right
+  text-align center
+
+  +wide-screen()
+    text-align right
 
 .tweet-button
   display inline-block
