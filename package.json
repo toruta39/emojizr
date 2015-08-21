@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "budo index.js:dist/bundle.js -t babelify --live | garnish",
-    "build": "mkdir -p dist && browserify index.js -t babelify | uglifyjs > dist/bundle.js && stylus -u ./node_modules/nib css/style.styl -o dist"
+    "build": "mkdir -p dist && browserify index.js -t babelify | uglifyjs > dist/bundle.js && stylus -u ./node_modules/nib styl/style.styl -o dist"
   },
   "keywords": [],
   "author": {
