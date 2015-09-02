@@ -1,19 +1,17 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import {kanaToEmojizedText, kanaToEmojizedHtml} from './lib/Converter';
 
 import TweetButton from './component/TweetButton';
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
 
-    let defaultText = 'にゃんぱすー `にゃんぱすー`'
-
     this.state = {
-      text: defaultText,
-      textResult: kanaToEmojizedText(defaultText),
-      htmlResult: kanaToEmojizedHtml(defaultText, {size: 16})
+      text: '',
+      textResult: kanaToEmojizedText(this.props.defaultText),
+      htmlResult: kanaToEmojizedHtml(this.props.defaultText, {size: 16})
     };
 
     this.onInputChange = this.onInputChange.bind(this);
@@ -37,7 +35,7 @@ class App extends React.Component {
       <div>
         <section>
           <h2>本文：</h2>
-          <textarea className="textarea" value={this.state.text} onChange={this.onInputChange}></textarea>
+          <textarea placeholder={`${this.props.defaultText}`} className="textarea" value={this.state.text} onChange={this.onInputChange}></textarea>
         </section>
 
         <section>
@@ -55,4 +53,8 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+App.propTypes = {
+  defaultText: PropTypes.string.isRequired
+};
+
+ReactDOM.render(<App defaultText="にゃんぱすー `にゃんぱすー`" />, document.querySelector('#app'));
