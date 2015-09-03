@@ -7,6 +7,8 @@ export default class CopyButton extends Component {
   constructor(props) {
     super(props);
 
+    this.timer = null;
+
     this.state = { copied: false };
   }
 
@@ -14,7 +16,13 @@ export default class CopyButton extends Component {
     this.clipboard = new ZeroClipboard(findDOMNode(this));
     this.clipboard.on('copy', () => {
       this.setState({ copied: true });
-      setTimeout(() => {
+
+      if (this.timer) {
+        clearTimeout(this.timer);
+        this.timer = null;
+      }
+
+      this.timer = setTimeout(() => {
         this.setState({ copied: false });
       }, 1500);
     });
