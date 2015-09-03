@@ -115,8 +115,11 @@ section
     text-align right
 
 .tweet-button
+.copy-button
+  position relative
   display inline-block
   text-align center
+  margin-left 12px
   padding 12px 16px 10px
   font-size 14px
   line-height 16px
@@ -127,14 +130,56 @@ section
   text-decoration none
 
   &:hover
+  &.zeroclipboard-is-hover
     background #46a1ef
 
   &:active
+  &.zeroclipboard-is-active
     background #1789eb
 
 .twitter-icon
+.copy-icon
   vertical-align middle
   margin-right 8px
+
+.copy-button__tip
+  position absolute
+  top -42px
+  left -100px
+  right -100px
+  margin auto
+  padding 8px 0
+  width 120px
+  text-align center
+  background lighten(#5dadf1, 30%)
+  border-radius 3px
+  transition all 0.2s ease
+  transform translate3d(0, 5px, 0)
+  opacity 0
+  pointer-events none
+
+  &:before
+  &:after
+    content ''
+    display block
+    position absolute
+    left 50%
+    bottom -4px
+    width 0
+    height 0
+    border 2px solid lighten(#5dadf1, 30%)
+
+  &:before
+    margin-left -4px
+    border-color lighten(#5dadf1, 30%) lighten(#5dadf1, 30%) transparent transparent
+
+  &:after
+    border-color lighten(#5dadf1, 30%) transparent transparent lighten(#5dadf1, 30%)
+
+.copy-button__tip--active
+  opacity 1
+  transform translate3d(0, 0, 0)
+  pointer-events auto
 
 .social
   margin 16px auto

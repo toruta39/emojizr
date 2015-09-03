@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import {kanaToEmojizedText, kanaToEmojizedHtml} from './lib/Converter';
 
+import CopyButton from './component/CopyButton';
 import TweetButton from './component/TweetButton';
 
 class App extends Component {
@@ -46,6 +47,8 @@ class App extends Component {
         </section>
 
         <section className="submit">
+          { !/Android|iPhone|iPad|iPod/i.test(navigator.userAgent) &&
+            <CopyButton text={this.state.textResult} /> }
           <TweetButton text={this.state.textResult} />
         </section>
       </div>
