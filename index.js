@@ -60,4 +60,4 @@ App.propTypes = {
   defaultText: PropTypes.string.isRequired
 };
 
-ReactDOM.render(<App defaultText="にゃんぱすー `にゃんぱすー`" />, document.querySelector('#app'));
+ReactDOM.render(<App defaultText={"にゃんぱすー \"にゃんぱすー\""} />, document.querySelector('#app'));
