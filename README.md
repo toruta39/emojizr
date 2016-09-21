@@ -1,4 +1,4 @@
-[Emojizr](http://emojizr.t39.me/)
+[Emojizr](https://emojizr.t39.me/)
 ===
 
 A toy app that converts Kana into Emoji.
