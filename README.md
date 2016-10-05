@@ -1,6 +1,8 @@
 [Emojizr](https://emojizr.t39.me/)
 ===
 
+[![](https://images.microbadger.com/badges/image/toruta39/emojizr.svg)](https://microbadger.com/images/toruta39/emojizr "Get your own image badge on microbadger.com")
+
 A toy app that converts Kana into Emoji.
 
 ## Installation
